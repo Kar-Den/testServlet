@@ -16,6 +16,7 @@ public class TestServlet extends HttpServlet {
         PrintWriter writer = resp.getWriter();
         String[] id = req.getParameterValues("id");
         String path = req.getContextPath();
+        String context = getServletContext().getInitParameter("allApp");
 
         try {
             writer.println("<h2>Hello from HelloServlet</h2>");
@@ -23,6 +24,7 @@ public class TestServlet extends HttpServlet {
             for (String element: id) writer.println(element);
             writer.println("</h2>");
             writer.println("<h3>путь к текущему приложению " + path + "</h3>");
+            writer.println("<h3>парметр контекста для всего приложения allApp " + context + "</h3>");
 
         } finally {
             writer.close();
