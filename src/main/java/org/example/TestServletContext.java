@@ -18,7 +18,7 @@ public class TestServletContext extends HttpServlet {
         String context = getServletContext().getInitParameter("allApp");
 
         PrintWriter writer = resp.getWriter();
-        writer.println("<h2>сервлет TestServletContext /test2 </h2>");
-        writer.println("<h3>парметр контекста для всего приложения allApp " + context + "</h3>");
+        writer.println("<h1>сервлет TestServletContext /test2 </h1>");
+        writer.println("<h3>парметр контекста для всего приложения allApp =" + context + "</h3>");
     }
 }

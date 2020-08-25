@@ -17,7 +17,7 @@
 
   <context-param>
     <param-name>allApp</param-name>
-    <param-value>context fo all приложенич</param-value>
+    <param-value>context for all приложения</param-value>
   </context-param>
 
 </web-app>
