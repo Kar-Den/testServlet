@@ -15,5 +15,10 @@
     <url-pattern>/test</url-pattern>
   </servlet-mapping>
 
+  <context-param>
+    <param-name>allApp</param-name>
+    <param-value>context fo all приложенич</param-value>
+  </context-param>
+
 </web-app>
 
