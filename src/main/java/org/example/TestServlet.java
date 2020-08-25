@@ -15,12 +15,14 @@ public class TestServlet extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         String[] id = req.getParameterValues("id");
+        String path = req.getContextPath();
 
         try {
             writer.println("<h2>Hello from HelloServlet</h2>");
             writer.print("<h2>Id:" );
             for (String element: id) writer.println(element);
             writer.println("</h2>");
+            writer.println("<h3>путь к текущему приложению " + path + "</h3>");
 
         } finally {
             writer.close();
