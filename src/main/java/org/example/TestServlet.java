@@ -14,11 +14,14 @@ public class TestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
-        String id = req.getParameter("id");
+        String[] id = req.getParameterValues("id");
 
         try {
             writer.println("<h2>Hello from HelloServlet</h2>");
-            writer.println("<h2>Id:" + id + "</h2>");
+            writer.print("<h2>Id:" );
+            for (String element: id) writer.println(element);
+            writer.println("</h2>");
+
         } finally {
             writer.close();
 
