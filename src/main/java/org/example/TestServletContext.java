@@ -1,5 +1,6 @@
 package org.example;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +18,12 @@ public class TestServletContext extends HttpServlet {
         resp.setCharacterEncoding("cp1251");
         String context = getServletContext().getInitParameter("allApp");
 
+        ServletConfig config = getServletConfig();
+
+
         PrintWriter writer = resp.getWriter();
         writer.println("<h1>сервлет TestServletContext /test2 </h1>");
         writer.println("<h3>парметр контекста для всего приложения allApp =" + context + "</h3>");
+        writer.println("<h3>начальные данные текщего сервлета =" + config.getInitParameter("startServlet") + "</h3>");
     }
 }
