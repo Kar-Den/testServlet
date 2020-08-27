@@ -5,6 +5,17 @@
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <!--<display-name>Archetype Created Web Application</display-name>-->
+
+    <servlet>
+        <servlet-name>SetCookie</servlet-name>
+        <servlet-class>org.example.cookies.SetCoocieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetCookie</servlet-name>
+        <url-pattern>/setCookie</url-pattern>
+    </servlet-mapping>
+
+
     <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>org.example.TestServlet</servlet-class>
